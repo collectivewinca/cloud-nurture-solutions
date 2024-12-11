@@ -1,5 +1,6 @@
 import { Mail, Phone, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
@@ -7,7 +8,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Cloud Nine Solutions</h3>
+            <div className="mb-4">
+              <img 
+                src="https://raw.githubusercontent.com/myblackbeanca/minydj/refs/heads/main/cnine/c9fav.png" 
+                alt="Cloud Nine Solutions Logo" 
+                className="h-12 w-auto"
+              />
+            </div>
             <p className="text-gray-300">Unlocking Growth Through Bespoke AI Solutions</p>
           </div>
           
@@ -44,12 +51,58 @@ const Footer = () => {
                   AI Strategy Development
                 </a>
               </li>
-              <li>
-                <a href="#success-stories" className="hover:text-primary transition-colors">
-                  Success Stories
-                </a>
-              </li>
             </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 border-t border-gray-700 pt-8">
+          <h3 className="text-lg font-semibold mb-4">Latest AI News</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-secondary-light p-4 rounded-lg">
+              <h4 className="font-medium mb-2">AI Confirms 50 New Planets</h4>
+              <p className="text-sm text-gray-300 mb-2">AI makes groundbreaking discovery using old NASA data...</p>
+              <a 
+                href="https://www.cnet.com/science/ai-confirms-50-new-planets-from-old-nasa-data-in-a-groundbreaking-first/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-light hover:text-primary text-sm"
+              >
+                Read more
+              </a>
+            </div>
+            <div className="bg-secondary-light p-4 rounded-lg">
+              <h4 className="font-medium mb-2">The Future of AI and Humanity</h4>
+              <p className="text-sm text-gray-300 mb-2">How AI might reshape the future of human society...</p>
+              <a 
+                href="https://www.theguardian.com/business/2015/nov/07/artificial-intelligence-homo-sapiens-split-handful-gods" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-light hover:text-primary text-sm"
+              >
+                Read more
+              </a>
+            </div>
+            <div className="bg-secondary-light p-4 rounded-lg">
+              <h4 className="font-medium mb-2">AI Granny Innovation</h4>
+              <p className="text-sm text-gray-300 mb-2">British telecom company develops AI companion...</p>
+              <a 
+                href="https://www.washingtontimes.com/news/2024/dec/10/british-telecom-company-creates-ai-granny-waste-ti/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-light hover:text-primary text-sm"
+              >
+                Read more
+              </a>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <Button 
+              variant="outline" 
+              className="text-white hover:text-primary border-white hover:border-primary"
+              onClick={() => window.open('https://blog.cloudninesolutions.nyc/', '_blank')}
+            >
+              Read More on Blog
+            </Button>
           </div>
         </div>
         
