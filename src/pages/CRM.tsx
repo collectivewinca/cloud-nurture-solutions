@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Database, User, BarChart, Robot, MessageSquare } from "lucide-react";
+import { Database, User, BarChart, Bot, MessageSquare } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -37,7 +37,7 @@ const CRM = () => {
                 description="Centralized customer management with a scalable and secure platform designed for growth."
               />
               <FeatureCard
-                icon={<Robot className="h-8 w-8" />}
+                icon={<Bot className="h-8 w-8" />}
                 title="AI-Enabled Modules"
                 description="Leverage predictive analytics and automated task management for enhanced efficiency."
               />
