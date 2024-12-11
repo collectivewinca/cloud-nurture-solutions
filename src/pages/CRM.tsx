@@ -10,16 +10,28 @@ const CRM = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-primary/10 to-primary/5 py-20">
+        <section className="bg-gradient-to-r from-primary-light via-white to-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
+              <div className="mb-8 flex justify-center">
+                <img 
+                  src="https://raw.githubusercontent.com/myblackbeanca/minydj/refs/heads/main/cnine/c9logo.png" 
+                  alt="Cloud Nine Solutions Logo" 
+                  className="h-24 w-auto"
+                />
+              </div>
               <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-                AI-Powered CRM for the Future Ready Business
+                AI-Powered CRM for the
+                <span className="text-primary block mt-2">Future Ready Business</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Transform your customer experience with our comprehensive, managed CRM solution that combines cutting-edge AI technology with intuitive design.
+                Transform your business with our comprehensive, managed CRM solution that combines 
+                cutting-edge AI technology with intuitive design.
               </p>
-              <Button size="lg" className="animate-fade-in">
+              <Button 
+                size="lg" 
+                className="bg-primary-accent hover:bg-primary-accent/90 text-white animate-fade-in"
+              >
                 Get Started Today
               </Button>
             </div>
@@ -32,27 +44,27 @@ const CRM = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Key Features and Functionalities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <FeatureCard
-                icon={<Database className="h-8 w-8" />}
+                icon={<Database className="h-8 w-8 text-primary" />}
                 title="CRM Core System"
                 description="Centralized customer management with a scalable and secure platform designed for growth."
               />
               <FeatureCard
-                icon={<Bot className="h-8 w-8" />}
+                icon={<Bot className="h-8 w-8 text-primary" />}
                 title="AI-Enabled Modules"
                 description="Leverage predictive analytics and automated task management for enhanced efficiency."
               />
               <FeatureCard
-                icon={<BarChart className="h-8 w-8" />}
+                icon={<BarChart className="h-8 w-8 text-primary" />}
                 title="Analytics & Monitoring"
                 description="Gain real-time insights and identify advanced trends in your customer data."
               />
               <FeatureCard
-                icon={<MessageSquare className="h-8 w-8" />}
+                icon={<MessageSquare className="h-8 w-8 text-primary" />}
                 title="Multi-Channel Communication"
                 description="Seamlessly interact with customers across all platforms with integrated messaging."
               />
               <FeatureCard
-                icon={<User className="h-8 w-8" />}
+                icon={<User className="h-8 w-8 text-primary" />}
                 title="Customer Segmentation"
                 description="Advanced AI-powered segmentation to identify and target key customer groups."
               />
@@ -68,7 +80,11 @@ const CRM = () => {
               Contact us today to learn how our AI-powered CRM solution can help you drive growth,
               improve efficiency, and deliver unparalleled customer experiences.
             </p>
-            <Button variant="default" size="lg">
+            <Button 
+              variant="default" 
+              size="lg"
+              className="bg-primary-accent hover:bg-primary-accent/90"
+            >
               Contact Us
             </Button>
           </div>
@@ -82,9 +98,9 @@ const CRM = () => {
 
 const FeatureCard = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) => {
   return (
-    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow bg-white">
-      <div className="text-primary mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow bg-white group hover:border-primary-light">
+      <div className="mb-4 group-hover:scale-110 transition-transform">{icon}</div>
+      <h3 className="text-xl font-semibold mb-2 text-secondary">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
