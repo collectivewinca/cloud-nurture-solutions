@@ -12,7 +12,7 @@ const Navbar = () => {
             <img 
               src="https://raw.githubusercontent.com/myblackbeanca/minydj/refs/heads/main/cnine/c9logo.png" 
               alt="Cloud Nine Solutions Logo" 
-              className="h-8 w-auto"
+              className="h-12 w-auto" // Increased from h-8 to h-12
             />
           </div>
           

@@ -2,13 +2,25 @@ import { Button } from "@/components/ui/button";
 import { Database, User, BarChart, Bot, MessageSquare } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet";
 
 const CRM = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>AI-Powered CRM Solutions | Cloud Nine Solutions</title>
+        <meta name="description" content="Transform your business with our comprehensive, AI-powered CRM solution. Custom-built for New York businesses to drive growth and improve efficiency." />
+        <meta name="keywords" content="CRM, AI CRM, Business Solutions, Cloud Nine Solutions, New York CRM" />
+        <meta property="og:title" content="AI-Powered CRM Solutions | Cloud Nine Solutions" />
+        <meta property="og:description" content="Transform your business with our comprehensive, AI-powered CRM solution. Custom-built for New York businesses to drive growth and improve efficiency." />
+        <meta property="og:image" content="https://raw.githubusercontent.com/myblackbeanca/minydj/refs/heads/main/cnine/c9logo.png" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://cloudninesolutions.com/crm" />
+      </Helmet>
+
       <Navbar />
       
-      <main className="pt-20">
+      <main className="flex-grow">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-primary-light via-white to-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +29,7 @@ const CRM = () => {
                 <img 
                   src="https://raw.githubusercontent.com/myblackbeanca/minydj/refs/heads/main/cnine/c9logo.png" 
                   alt="Cloud Nine Solutions Logo" 
-                  className="h-24 w-auto"
+                  className="h-32 w-auto" // Increased from h-24 to h-32
                 />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
