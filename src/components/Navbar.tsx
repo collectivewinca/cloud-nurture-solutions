@@ -12,13 +12,13 @@ const Navbar = () => {
             <img 
               src="https://raw.githubusercontent.com/myblackbeanca/minydj/refs/heads/main/cnine/c9logo.png" 
               alt="Cloud Nine Solutions Logo" 
-              className="h-12 w-auto" // Increased from h-8 to h-12
+              className="h-12 w-auto"
             />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-gray-700 hover:text-primary">Services</a>
-            <a href="#success-stories" className="text-gray-700 hover:text-primary">Success Stories</a>
+            <a href="/crm" className="text-gray-700 hover:text-primary">AI-Powered CRM</a>
             <a href="#contact" className="bg-primary-accent text-white px-4 py-2 rounded-md hover:bg-primary-accent/90 transition-colors">
               Contact Us
             </a>
@@ -36,7 +36,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
             <a href="#services" className="block px-3 py-2 text-gray-700 hover:text-primary">Services</a>
-            <a href="#success-stories" className="block px-3 py-2 text-gray-700 hover:text-primary">Success Stories</a>
+            <a href="/crm" className="block px-3 py-2 text-gray-700 hover:text-primary">AI-Powered CRM</a>
             <a href="#contact" className="block px-3 py-2 text-gray-700 hover:text-primary">Contact Us</a>
           </div>
         </div>
