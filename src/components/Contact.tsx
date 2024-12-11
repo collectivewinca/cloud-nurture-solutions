@@ -68,20 +68,6 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg animate-fade-in-up">
-            <Mail className="w-8 h-8 text-primary mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-            <p className="text-gray-600 text-center">contact@cloudninesolutions.com</p>
-          </div>
-
-          <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <MapPin className="w-8 h-8 text-primary mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
-            <p className="text-gray-600 text-center">New York, NY</p>
-          </div>
-        </div>
-
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-sm border animate-fade-in-up">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
