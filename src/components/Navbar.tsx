@@ -22,15 +22,9 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className={navLinkClass}>Services</a>
+            <Link to="/ai-strategy" className={navLinkClass}>AI Strategy</Link>
             <Link to="/crm" className={navLinkClass}>AI-Powered CRM</Link>
             <Link to="/blog" className={navLinkClass}>Blog</Link>
-            <a 
-              href="#contact" 
-              className="bg-[#ea384c] text-white px-6 py-2 rounded-md hover:bg-[#ea384c]/90 transition-all duration-300 transform hover:scale-105"
-            >
-              Contact Us
-            </a>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -44,10 +38,9 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-secondary/95 backdrop-blur-sm">
-            <a href="#services" className={navLinkClass}>Services</a>
+            <Link to="/ai-strategy" className={navLinkClass}>AI Strategy</Link>
             <Link to="/crm" className={navLinkClass}>AI-Powered CRM</Link>
             <Link to="/blog" className={navLinkClass}>Blog</Link>
-            <a href="#contact" className={navLinkClass}>Contact Us</a>
           </div>
         </div>
       )}

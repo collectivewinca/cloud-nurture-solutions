@@ -11,7 +11,7 @@ const Footer = () => {
               <img 
                 src="https://raw.githubusercontent.com/myblackbeanca/minydj/refs/heads/main/cnine/c9fav.png" 
                 alt="Cloud Nine Solutions Logo" 
-                className="h-20 w-auto" // Increased from h-12 to h-20
+                className="h-24 w-auto" // Increased from h-20 to h-24
               />
             </div>
             <p className="text-gray-300">Unlocking Growth Through Bespoke AI Solutions</p>
@@ -46,9 +46,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-primary transition-colors">
+                <Link to="/ai-strategy" className="hover:text-primary transition-colors">
                   AI Strategy Development
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
