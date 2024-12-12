@@ -3,24 +3,33 @@ import ParticlesBackground from "./ParticlesBackground";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light via-white to-white pt-16">
-      <ParticlesBackground />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in">
+    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Particles container limited to hero section */}
+      <div className="absolute inset-0">
+        <ParticlesBackground />
+      </div>
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/80 to-secondary/95" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 tracking-tight">
             Unlocking Growth Through
-            <span className="text-primary-success block mt-2">Bespoke AI Solutions</span>
+            <span className="bg-gradient-to-r from-primary via-primary-light to-primary-success bg-clip-text text-transparent block mt-2">
+              Bespoke AI Solutions
+            </span>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+          <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
             Transform your New York business with custom AI solutions that drive growth,
             improve efficiency, and keep you ahead of the competition.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary-light transition-all duration-300 transform hover:scale-105 text-lg font-medium shadow-lg hover:shadow-primary/50"
           >
             Get Started
-            <ArrowRight className="ml-2" size={20} />
+            <ArrowRight className="ml-2 animate-pulse" size={24} />
           </a>
         </div>
       </div>

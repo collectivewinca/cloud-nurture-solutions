@@ -9,7 +9,6 @@ declare global {
 
 const ParticlesBackground = () => {
   useEffect(() => {
-    // Load particles.js
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
     script.async = true;
@@ -17,7 +16,7 @@ const ParticlesBackground = () => {
     script.onload = () => {
       window.particlesJS("particles-js", {
         particles: {
-          number: { value: 380, density: { enable: true, value_area: 800 } },
+          number: { value: 80, density: { enable: true, value_area: 800 } },
           color: { value: "#ffffff" },
           shape: {
             type: "circle",
@@ -75,7 +74,6 @@ const ParticlesBackground = () => {
 
     return () => {
       document.body.removeChild(script);
-      // Clean up particles instance if it exists
       if (window.pJSDom && window.pJSDom.length > 0) {
         window.pJSDom[0].pJS.fn.vendors.destroypJS();
         window.pJSDom = [];
@@ -86,9 +84,9 @@ const ParticlesBackground = () => {
   return (
     <div 
       id="particles-js" 
-      className="fixed inset-0 z-0 pointer-events-none"
+      className="absolute inset-0 z-0"
       style={{
-        backgroundColor: 'rgba(26, 31, 44, 0.95)', // Using secondary color with opacity
+        backgroundColor: '#1A1F2C', // Dark tech-inspired background
       }}
     />
   );
