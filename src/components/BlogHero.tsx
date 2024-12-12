@@ -37,35 +37,43 @@ const BlogHero = () => {
   };
 
   return (
-    <div className="relative bg-secondary py-16 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-            Latest Insights in AI & Technology
-          </h1>
-          <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-300 sm:mt-4">
-            Stay updated with our latest articles, insights, and industry news
-          </p>
-          
-          <form onSubmit={handleSubmit} className="mt-8 sm:mx-auto sm:max-w-lg">
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Input
-                type="email"
-                required
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 min-w-0"
-              />
-              <Button 
-                type="submit" 
-                disabled={isLoading}
-                className="bg-primary hover:bg-primary/90"
-              >
-                {isLoading ? "Subscribing..." : "Subscribe"}
-              </Button>
-            </div>
-          </form>
+    <div className="relative bg-secondary py-24 sm:py-32 overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      
+      <div className="relative">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              Latest Insights in{" "}
+              <span className="bg-gradient-to-r from-primary via-primary-light to-primary-success bg-clip-text text-transparent">
+                AI & Technology
+              </span>
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-300">
+              Stay updated with our latest articles, insights, and industry news
+            </p>
+            
+            <form onSubmit={handleSubmit} className="mt-10 sm:mx-auto sm:max-w-xl">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Input
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 min-w-0 bg-white/5 border-white/10 text-white placeholder:text-gray-400"
+                />
+                <Button 
+                  type="submit" 
+                  disabled={isLoading}
+                  className="bg-primary hover:bg-primary/90 text-white font-medium px-8"
+                >
+                  {isLoading ? "Subscribing..." : "Subscribe"}
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
