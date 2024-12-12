@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -58,6 +59,13 @@ const BlogPost = () => {
       <Navbar />
       <div className="pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link 
+            to="/blog" 
+            className="inline-flex items-center text-primary hover:text-primary-light mb-6 transition-colors"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to Blog
+          </Link>
           <article className="bg-white rounded-lg shadow-md p-8">
             <h1 className="text-4xl font-bold text-secondary mb-6">{post.title}</h1>
             <div className="prose max-w-none">

@@ -11,7 +11,7 @@ const Footer = () => {
               <img 
                 src="https://raw.githubusercontent.com/myblackbeanca/minydj/refs/heads/main/cnine/c9fav.png" 
                 alt="Cloud Nine Solutions Logo" 
-                className="h-12 w-auto"
+                className="h-20 w-auto" // Increased from h-12 to h-20
               />
             </div>
             <p className="text-gray-300">Unlocking Growth Through Bespoke AI Solutions</p>
