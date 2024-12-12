@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogHero from "@/components/BlogHero";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const blogPosts = [
   {
@@ -78,38 +79,41 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
-      <BlogHero />
-      <div className="pt-16 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <Link 
-                key={post.id} 
-                to={`/blog/${post.slug}`}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden"
-              >
-                <div className="aspect-w-16 aspect-h-9">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="object-cover w-full h-48"
-                  />
-                </div>
-                <div className="p-6">
-                  <h2 className="text-xl font-semibold text-secondary mb-3">{post.title}</h2>
-                  <p className="text-gray-600">{post.excerpt}</p>
-                  <div className="mt-4 text-primary hover:text-primary-light transition-colors">
-                    Read more →
+    <div className="min-h-screen bg-gray-50 relative">
+      <ParticlesBackground />
+      <div className="relative z-10">
+        <Navbar />
+        <BlogHero />
+        <div className="pt-16 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post) => (
+                <Link 
+                  key={post.id} 
+                  to={`/blog/${post.slug}`}
+                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden"
+                >
+                  <div className="aspect-w-16 aspect-h-9">
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="object-cover w-full h-48"
+                    />
                   </div>
-                </div>
-              </Link>
-            ))}
+                  <div className="p-6">
+                    <h2 className="text-xl font-semibold text-secondary mb-3">{post.title}</h2>
+                    <p className="text-gray-600">{post.excerpt}</p>
+                    <div className="mt-4 text-primary hover:text-primary-light transition-colors">
+                      Read more →
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
