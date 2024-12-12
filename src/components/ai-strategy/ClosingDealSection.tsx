@@ -1,4 +1,4 @@
-import { Calendar, Contract, FileText } from "lucide-react";
+import { Calendar, Contact, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -40,7 +40,7 @@ const ClosingDealSection = () => {
                 className="object-cover w-full h-full"
               />
             </div>
-            <Contract className="w-12 h-12 text-primary mb-4" />
+            <Contact className="w-12 h-12 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-4">Call 3+: Proposal</h3>
             <p className="text-gray-700">Clearly outline deliverables, timelines, and pricing (value-based, please!). Offer add-ons like maintenance packages and training.</p>
           </div>
