@@ -34,6 +34,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submission started", formData);
     setIsSubmitting(true);
 
     try {
@@ -42,7 +43,12 @@ const ContactForm = () => {
         .from("contact_requests")
         .insert([formData]);
 
-      if (dbError) throw dbError;
+      if (dbError) {
+        console.error("Database error:", dbError);
+        throw dbError;
+      }
+
+      console.log("Database insert successful");
 
       // Send thank you email
       const { error: emailError } = await supabase.functions.invoke('send-thank-you-email', {
@@ -54,7 +60,12 @@ const ContactForm = () => {
         }
       });
 
-      if (emailError) throw emailError;
+      if (emailError) {
+        console.error("Email sending error:", emailError);
+        throw emailError;
+      }
+
+      console.log("Email sent successfully");
 
       toast({
         title: "Success!",
