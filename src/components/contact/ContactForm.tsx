@@ -37,33 +37,28 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
+      // Insert into contact_requests table
+      const { error: dbError } = await supabase
         .from("contact_requests")
         .insert([formData]);
 
-      if (error) throw error;
+      if (dbError) throw dbError;
 
       // Send thank you email
-      const response = await fetch('/functions/v1/send-thank-you-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.SUPABASE_ANON_KEY}`,
-        },
-        body: JSON.stringify({
+      const { error: emailError } = await supabase.functions.invoke('send-thank-you-email', {
+        body: {
+          type: 'contact',
           name: formData.name,
           email: formData.email,
-          business_name: formData.business_name,
-        }),
+          business_name: formData.business_name
+        }
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to send thank you email');
-      }
+      if (emailError) throw emailError;
 
       toast({
         title: "Success!",
-        description: "Your message has been sent. We'll get back to you soon.",
+        description: "Your message has been sent. Check your email for confirmation.",
       });
 
       setFormData({

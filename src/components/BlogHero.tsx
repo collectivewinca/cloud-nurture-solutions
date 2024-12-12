@@ -14,18 +14,30 @@ const BlogHero = () => {
     setIsLoading(true);
 
     try {
-      const { error } = await supabase
+      // Insert into newsletter_subscribers table
+      const { error: dbError } = await supabase
         .from("newsletter_subscribers")
         .insert([{ email }]);
 
-      if (error) throw error;
+      if (dbError) throw dbError;
+
+      // Send thank you email
+      const { error: emailError } = await supabase.functions.invoke('send-thank-you-email', {
+        body: {
+          type: 'newsletter',
+          email: email
+        }
+      });
+
+      if (emailError) throw emailError;
 
       toast({
         title: "Success!",
-        description: "You've been subscribed to our newsletter.",
+        description: "You've been subscribed to our newsletter. Check your email for confirmation.",
       });
       setEmail("");
     } catch (error) {
+      console.error("Error:", error);
       toast({
         title: "Error",
         description: "Failed to subscribe. Please try again.",
