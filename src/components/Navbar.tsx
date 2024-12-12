@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinkClass = "text-[#ea384c] hover:text-primary transition-colors font-medium";
+
   return (
     <nav className="fixed w-full bg-white/5 backdrop-blur-sm z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,19 +22,19 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-white hover:text-primary transition-colors">Services</a>
-            <Link to="/crm" className="text-white hover:text-primary transition-colors">AI-Powered CRM</Link>
-            <Link to="/blog" className="text-white hover:text-primary transition-colors">Blog</Link>
+            <a href="#services" className={navLinkClass}>Services</a>
+            <Link to="/crm" className={navLinkClass}>AI-Powered CRM</Link>
+            <Link to="/blog" className={navLinkClass}>Blog</Link>
             <a 
               href="#contact" 
-              className="bg-primary text-white px-6 py-2 rounded-md hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+              className="bg-[#ea384c] text-white px-6 py-2 rounded-md hover:bg-[#ea384c]/90 transition-all duration-300 transform hover:scale-105"
             >
               Contact Us
             </a>
           </div>
 
           <div className="md:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-[#ea384c]">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -42,10 +44,10 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-secondary/95 backdrop-blur-sm">
-            <a href="#services" className="block px-3 py-2 text-white hover:text-primary transition-colors">Services</a>
-            <Link to="/crm" className="block px-3 py-2 text-white hover:text-primary transition-colors">AI-Powered CRM</Link>
-            <Link to="/blog" className="block px-3 py-2 text-white hover:text-primary transition-colors">Blog</Link>
-            <a href="#contact" className="block px-3 py-2 text-white hover:text-primary transition-colors">Contact Us</a>
+            <a href="#services" className={navLinkClass}>Services</a>
+            <Link to="/crm" className={navLinkClass}>AI-Powered CRM</Link>
+            <Link to="/blog" className={navLinkClass}>Blog</Link>
+            <a href="#contact" className={navLinkClass}>Contact Us</a>
           </div>
         </div>
       )}

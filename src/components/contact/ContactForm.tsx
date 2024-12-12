@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/components/ui/use-toast";
-import ContactFormInput from "./ContactFormInput";
-import ContactFormTextarea from "./ContactFormTextarea";
+import ContactFormFields from "./ContactFormFields";
+import ContactSubmitButton from "./ContactSubmitButton";
 
 export interface FormData {
   name: string;
@@ -94,63 +94,8 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-xl animate-fade-in-up">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ContactFormInput
-          label="Name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <ContactFormInput
-          label="Email"
-          name="email"
-          type="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <ContactFormInput
-          label="Phone Number"
-          name="phone"
-          type="tel"
-          value={formData.phone}
-          onChange={handleChange}
-          required
-        />
-        <ContactFormInput
-          label="Business Name"
-          name="business_name"
-          value={formData.business_name}
-          onChange={handleChange}
-          required
-        />
-        <ContactFormInput
-          label="Best Time to Call"
-          name="best_time_to_call"
-          value={formData.best_time_to_call}
-          onChange={handleChange}
-          placeholder="e.g., Weekdays 9AM-5PM"
-          required
-        />
-        <div className="md:col-span-2">
-          <ContactFormTextarea
-            label="Your Requirements"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </div>
-      </div>
-      <div className="mt-6">
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-primary text-white py-3 px-4 rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 font-medium"
-        >
-          {isSubmitting ? "Sending..." : "Submit"}
-        </button>
-      </div>
+      <ContactFormFields formData={formData} onChange={handleChange} />
+      <ContactSubmitButton isSubmitting={isSubmitting} />
     </form>
   );
 };
