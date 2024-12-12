@@ -2,13 +2,17 @@ import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Brain, Cpu, LineChart, Target } from "lucide-react";
+import ClosingDealSection from "@/components/ai-strategy/ClosingDealSection";
 
 const AIStrategy = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
         <title>AI Strategy Development | Cloud Nine Solutions</title>
-        <meta name="description" content="Transform your business with our comprehensive AI strategy development services. Custom-built solutions to drive innovation and growth." />
+        <meta 
+          name="description" 
+          content="Transform your business with our comprehensive AI strategy development services. Custom-built solutions to drive innovation and growth." 
+        />
       </Helmet>
 
       <Navbar />
@@ -128,57 +132,8 @@ const AIStrategy = () => {
           </div>
         </section>
 
-        {/* Tools Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-secondary mb-8">No-Code Nirvana: Tools to Empower Your AAA</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
-                  alt="Person using laptop" 
-                  className="rounded-lg shadow-lg w-full mb-6"
-                />
-                <h3 className="text-xl font-semibold mb-4">Chatbots</h3>
-                <p className="text-gray-700 mb-4">
-                  Weekend Tech is a standout for RAG-powered chatbots. Ingest entire websites via sitemaps, upload files in bulk, and deploy chat widgets with ease. Botpress and Voiceflow offer robust chatbot flow builders, even without heavy RAG integration.
-                </p>
-              </div>
-              <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-                  alt="Woman using laptop" 
-                  className="rounded-lg shadow-lg w-full mb-6"
-                />
-                <h3 className="text-xl font-semibold mb-4">Internal Apps</h3>
-                <p className="text-gray-700 mb-4">
-                  Weekend Tech lets you build custom content generation panels, training LLMs with client data for hyper-specific text generation. Make.io connects disparate apps for seamless automations. Need complex LLM workflows? Flowise (open-source) offer Langchain/LlamaIndex functionality in a user-friendly GUI.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-secondary mb-8">Closing the Deal: From Consultation to Contract</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">Call 1: Consultation</h3>
-                <p className="text-gray-700">Listen. Understand. Present high-level solutions (Plus AI can generate slick slide decks).</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">Call 2: Demo</h3>
-                <p className="text-gray-700">Showcase a pre-built demo or a quick no-code prototype.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">Call 3+: Proposal</h3>
-                <p className="text-gray-700">Clearly outline deliverables, timelines, and pricing (value-based, please!). Offer add-ons like maintenance packages and training.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Closing Deal Section */}
+        <ClosingDealSection />
 
         {/* Marketing and Legal Section */}
         <section className="py-16 bg-white">
