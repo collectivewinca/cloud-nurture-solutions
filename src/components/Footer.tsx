@@ -11,7 +11,7 @@ const Footer = () => {
               <img 
                 src="https://raw.githubusercontent.com/myblackbeanca/minydj/refs/heads/main/cnine/c9fav.png" 
                 alt="Cloud Nine Solutions Logo" 
-                className="h-24 w-auto" // Increased from h-20 to h-24
+                className="h-24 w-auto"
               />
             </div>
             <p className="text-gray-300">Unlocking Growth Through Bespoke AI Solutions</p>
@@ -26,8 +26,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:contact@cloudninesolutions.com" className="hover:text-primary transition-colors">
-                  contact@cloudninesolutions.com
+                <a href="mailto:hello@cloudninesolutions.nyc" className="hover:text-primary transition-colors">
+                  hello@cloudninesolutions.nyc
                 </a>
               </div>
               <div className="flex items-center gap-2">
