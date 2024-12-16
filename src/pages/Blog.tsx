@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogHero from "@/components/BlogHero";
+import { Helmet } from "react-helmet";
 
 const blogPosts = [
   {
@@ -82,6 +83,16 @@ const blogPosts = [
 const Blog = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-secondary to-secondary/95">
+      <Helmet>
+        <title>AI Technology Insights & News | Cloud Nine Solutions Blog</title>
+        <meta name="description" content="Stay updated with the latest in AI technology, machine learning, and digital transformation. Expert insights from Cloud Nine Solutions' team of AI specialists." />
+        <meta name="keywords" content="AI Blog, Technology News, Cloud Nine Solutions, AI Insights, Machine Learning Updates" />
+        <meta property="og:title" content="AI Technology Insights & News | Cloud Nine Solutions Blog" />
+        <meta property="og:description" content="Stay updated with the latest in AI technology, machine learning, and digital transformation. Expert insights from Cloud Nine Solutions' team of AI specialists." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://cloudninesolutions.com/blog" />
+      </Helmet>
+
       <div className="relative z-10">
         <Navbar />
         <BlogHero />

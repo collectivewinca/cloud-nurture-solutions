@@ -8,11 +8,13 @@ const AIStrategy = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
-        <title>AI Strategy Development | Cloud Nine Solutions</title>
-        <meta 
-          name="description" 
-          content="Transform your business with our comprehensive AI strategy development services. Custom-built solutions to drive innovation and growth." 
-        />
+        <title>Custom AI Strategy Development | Cloud Nine Solutions New York</title>
+        <meta name="description" content="Transform your business with our comprehensive AI strategy development services. Expert AI consulting and implementation for New York businesses." />
+        <meta name="keywords" content="AI Strategy, AI Consulting, Digital Transformation, Cloud Nine Solutions, New York AI Services" />
+        <meta property="og:title" content="Custom AI Strategy Development | Cloud Nine Solutions New York" />
+        <meta property="og:description" content="Transform your business with our comprehensive AI strategy development services. Expert AI consulting and implementation for New York businesses." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://cloudninesolutions.com/ai-strategy" />
       </Helmet>
 
       <Navbar />
