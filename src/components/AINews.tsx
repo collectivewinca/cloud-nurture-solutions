@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const AINews = () => {
@@ -44,13 +45,14 @@ const AINews = () => {
           </div>
         </div>
         <div className="text-center mt-8">
-          <Button 
-            variant="outline" 
-            className="border-primary text-primary hover:bg-primary hover:text-white"
-            onClick={() => window.open('https://blog.cloudninesolutions.nyc/', '_blank')}
-          >
-            Read More on Blog
-          </Button>
+          <Link to="/blog">
+            <Button 
+              variant="outline" 
+              className="border-primary text-primary hover:bg-primary hover:text-white"
+            >
+              Read More on Blog
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
