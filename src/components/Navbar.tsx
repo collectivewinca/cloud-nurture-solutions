@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinkClass = "text-[#ea384c] hover:text-primary transition-colors font-medium";
+  const navLinkClass = "text-[#ea384c] hover:text-primary transition-colors font-medium block w-full px-4 py-2";
 
   return (
     <nav className="fixed w-full bg-white/5 backdrop-blur-sm z-50 border-b border-white/10">
@@ -28,7 +28,11 @@ const Navbar = () => {
           </div>
 
           <div className="md:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-[#ea384c]">
+            <button 
+              onClick={() => setIsOpen(!isOpen)} 
+              className="text-[#ea384c] p-2"
+              aria-label="Toggle menu"
+            >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -36,11 +40,29 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-secondary/95 backdrop-blur-sm">
-            <Link to="/ai-strategy" className={navLinkClass}>AI Strategy</Link>
-            <Link to="/crm" className={navLinkClass}>AI-Powered CRM</Link>
-            <Link to="/blog" className={navLinkClass}>Blog</Link>
+        <div className="md:hidden absolute w-full">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-secondary/95 backdrop-blur-sm">
+            <Link 
+              to="/ai-strategy" 
+              className={navLinkClass}
+              onClick={() => setIsOpen(false)}
+            >
+              AI Strategy
+            </Link>
+            <Link 
+              to="/crm" 
+              className={navLinkClass}
+              onClick={() => setIsOpen(false)}
+            >
+              AI-Powered CRM
+            </Link>
+            <Link 
+              to="/blog" 
+              className={navLinkClass}
+              onClick={() => setIsOpen(false)}
+            >
+              Blog
+            </Link>
           </div>
         </div>
       )}
