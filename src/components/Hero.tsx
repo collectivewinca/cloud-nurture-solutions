@@ -20,13 +20,20 @@ const Hero = () => {
               Bespoke AI Solutions
             </span>
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl text-gray-300 mb-4">
+            Revolutionize Your Business with Tailored AI Services
+          </h2>
+          <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
             Transform your New York business with custom AI solutions that drive growth,
-            improve efficiency, and keep you ahead of the competition.
+            improve efficiency, and keep you ahead of the competition. Serving businesses in Manhattan, Brooklyn, and beyond.
           </p>
+          <h3 className="text-lg sm:text-xl text-gray-400 mb-8">
+            AI Strategy Development | Predictive Analytics | Automation
+          </h3>
           <a
             href="#contact"
             className="inline-flex items-center px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary-light transition-all duration-300 transform hover:scale-105 text-lg font-medium shadow-lg hover:shadow-primary/50"
+            aria-label="Get Started with AI Solutions"
           >
             Get Started
             <ArrowRight className="ml-2 animate-pulse" size={24} />
