@@ -42,6 +42,155 @@ export type Database = {
         }
         Relationships: []
       }
+      epks: {
+        Row: {
+          bio: string | null
+          created_at: string | null
+          email: string | null
+          followers: number | null
+          genre: string | null
+          id: string
+          identifier: string
+          instagram_posts: string[] | null
+          instagram_url: string | null
+          mixtapes: Json | null
+          name: string
+          photo_url: string | null
+          shortened_link: string | null
+          show_comments: boolean | null
+          spotify_data: Json | null
+          upcoming_events: Json | null
+          updated_at: string | null
+          youtube_data: Json | null
+        }
+        Insert: {
+          bio?: string | null
+          created_at?: string | null
+          email?: string | null
+          followers?: number | null
+          genre?: string | null
+          id?: string
+          identifier: string
+          instagram_posts?: string[] | null
+          instagram_url?: string | null
+          mixtapes?: Json | null
+          name: string
+          photo_url?: string | null
+          shortened_link?: string | null
+          show_comments?: boolean | null
+          spotify_data?: Json | null
+          upcoming_events?: Json | null
+          updated_at?: string | null
+          youtube_data?: Json | null
+        }
+        Update: {
+          bio?: string | null
+          created_at?: string | null
+          email?: string | null
+          followers?: number | null
+          genre?: string | null
+          id?: string
+          identifier?: string
+          instagram_posts?: string[] | null
+          instagram_url?: string | null
+          mixtapes?: Json | null
+          name?: string
+          photo_url?: string | null
+          shortened_link?: string | null
+          show_comments?: boolean | null
+          spotify_data?: Json | null
+          upcoming_events?: Json | null
+          updated_at?: string | null
+          youtube_data?: Json | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "epks_identifier_fkey"
+            columns: ["identifier"]
+            isOneToOne: true
+            referencedRelation: "musicians"
+            referencedColumns: ["identifier"]
+          },
+        ]
+      }
+      musicians: {
+        Row: {
+          bio: string | null
+          created_at: string | null
+          email: string | null
+          followers: number | null
+          genre: string | null
+          id: string
+          identifier: string
+          instagram_posts: string[] | null
+          instagram_profile: Json | null
+          last_updated: string | null
+          name: string
+          name_lw: string
+          photo_url: string | null
+          spotify_albums: Json | null
+          spotify_artist: Json | null
+          spotify_artist_data: Json | null
+          spotify_single: Json | null
+          tags: string | null
+          youtube_channel_data: Json | null
+          youtube_comments: Json | null
+          youtube_playlists: Json | null
+          youtube_popular_videos: Json | null
+          youtube_recent_videos: Json | null
+        }
+        Insert: {
+          bio?: string | null
+          created_at?: string | null
+          email?: string | null
+          followers?: number | null
+          genre?: string | null
+          id?: string
+          identifier: string
+          instagram_posts?: string[] | null
+          instagram_profile?: Json | null
+          last_updated?: string | null
+          name: string
+          name_lw: string
+          photo_url?: string | null
+          spotify_albums?: Json | null
+          spotify_artist?: Json | null
+          spotify_artist_data?: Json | null
+          spotify_single?: Json | null
+          tags?: string | null
+          youtube_channel_data?: Json | null
+          youtube_comments?: Json | null
+          youtube_playlists?: Json | null
+          youtube_popular_videos?: Json | null
+          youtube_recent_videos?: Json | null
+        }
+        Update: {
+          bio?: string | null
+          created_at?: string | null
+          email?: string | null
+          followers?: number | null
+          genre?: string | null
+          id?: string
+          identifier?: string
+          instagram_posts?: string[] | null
+          instagram_profile?: Json | null
+          last_updated?: string | null
+          name?: string
+          name_lw?: string
+          photo_url?: string | null
+          spotify_albums?: Json | null
+          spotify_artist?: Json | null
+          spotify_artist_data?: Json | null
+          spotify_single?: Json | null
+          tags?: string | null
+          youtube_channel_data?: Json | null
+          youtube_comments?: Json | null
+          youtube_playlists?: Json | null
+          youtube_popular_videos?: Json | null
+          youtube_recent_videos?: Json | null
+        }
+        Relationships: []
+      }
       newsletter_subscribers: {
         Row: {
           created_at: string
